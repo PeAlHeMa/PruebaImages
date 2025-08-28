@@ -6,21 +6,24 @@ It's built with vanilla JavaScript, HTML, and CSS, and has no external dependenc
 
 ## Features
 
-- **360° Rotation**: View products from all angles.
-- **Mouse and Touch Controls**: Drag to rotate the product.
+- **Multi-row 360° Rotation**: View products from all angles, with both horizontal and vertical rotation.
+- **Mouse and Touch Controls**: Drag horizontally, vertically, and diagonally to rotate the product.
 - **Easy Setup**: Just drop your images into a folder.
 - **No Dependencies**: No need for jQuery, Three.js, or any other library.
 - **Responsive**: Works on desktop and mobile devices.
+- **Optimized Loading**: Images are preloaded efficiently.
 
 ## How to Use
 
 1.  **Download or Clone**: Get the project files.
 2.  **Add Your Images**: Place your product images inside the `images` folder.
-3.  **Name Your Images**: Your images must be named in a sequential numerical order, starting from 1. For example:
-    - `frame-1.jpg`
-    - `frame-2.jpg`
-    - `frame-3.jpg`
-    - ...and so on.
+3.  **Name Your Images**: Your images must be named in a grid-based sequence, with rows and columns. The naming convention is `frame-{row}-{col}.jpg`. For example:
+
+    -   `frame-1-1.jpg`, `frame-1-2.jpg`, ..., `frame-1-36.jpg` (Row 1)
+    -   `frame-2-1.jpg`, `frame-2-2.jpg`, ..., `frame-2-36.jpg` (Row 2)
+    -   ...and so on.
+
+    The script will automatically detect the number of rows and columns.
 
     The prefix (`frame-`) and extension (`.jpg`) can be easily configured in the `js/main.js` file if needed.
 
